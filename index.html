@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <title>Ejercicios del DOM</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Ejercicios del DOM</h1> 
+        </header>
+
+    
+        <!-- boton de hamburguesa -->
+        <button class="hamburguer">
+            =
+        </button>
+        
+        <!-- panel del menu -->
+        <aside class="panel">
+            <nav class="menu">
+                <a href="#excercise-1" data-scroll-spy>Reloj y alarma digital</a>
+                <a href="#excercise-2" data-scroll-spy>Atajos del teclado</a>
+                <a href="#excercise-3" data-scroll-spy>Cuenta regresiva</a>
+                <a href="#excercise-4" data-scroll-spy>Responsible</a>
+                <a href="#excercise-5" data-scroll-spy>formularios</a>
+                <a href="#excercise-6" data-scroll-spy>User agent</a>
+                <a href="#excercise-7" data-scroll-spy>Deteccion de conexion</a>
+                <a href="#excercise-8" data-scroll-spy>Deteccion de la webcam</a>
+                <a href="#excercise-9" data-scroll-spy>Geolocalizacion</a>
+                <a href="#excercise-10" data-scroll-spy>Filtros de busqueda</a>
+                <a href="#excercise-11" data-scroll-spy>Sorteo digital</a>
+                <a href="#excercise-12" data-scroll-spy>Responsive slider</a>
+                <a href="#excercise-13" data-scroll-spy>Video inteligente</a>
+                <a href="#excercise-14" data-scroll-spy>Validacion de formularios</a>
+                <a href="#excercise-15" data-scroll-spy>Narrador de voz</a>
+            </nav>
+        </aside>
+
+
+
+
+        <!-- boton para volver al inicio -->
+        <a class="up hidden-btn"  ><b>&#11014;</b></a>
+        
+        
+        
+        <!-- boton tema claro-oscuro -->
+        <a class="theme"  ><span class="theme-span">D</span></a>
+
+        <main>
+
+            <section data-scroll-spy id="excercise-1">
+                <h3>Excercise 1</h3>
+                <br>
+
+                <h4>Reloj y alarma digital</h4>
+                <br>
+
+                <h2 id="time"></h2>
+
+                
+                <div>
+                    <button class="timeStart">iniciar reloj</button>
+                    <button class="timeStop">detener reloj</button>
+                    <button id="alarmStart">iniciar alarma</button>
+                    <button id="alarmtStop">detener alarma</button>
+                </div>
+            </section>
+
+
+
+
+            <section data-scroll-spy id="excercise-2">
+                <h3>Excercise 2</h3>
+                <br>
+
+                <h4>Atajos de teclado</h4>
+                <br>
+
+                <article id="stage">
+                    <div id="ball"></div>
+                </article>
+            </section>
+
+
+
+
+            <section data-scroll-spy id="excercise-3">
+                <h3>Cuenta regresiva</h3>
+
+                <h3 id="countdown"></h3>
+            </section>
+
+
+
+
+            <section data-scroll-spy id="excercise-4">
+                <h3>Responsible</h3>
+
+                <div id="youtube">
+
+                </div>
+
+                <div id="gmaps">
+
+                </div>
+
+            </section>
+
+
+
+
+            <section data-scroll-spy id="excercise-5">
+                <h3>formulario</h3>
+
+                
+                <form action="" id="responsive-tester">
+                    <input type="url" name="direction" placeholder="url" required>
+                    <br>
+                    <input type="text" name="width" placeholder="width" required>
+                    <br>
+                    <input type="text" name="height" placeholder="height" required>
+                    <br>
+                    <input type="submit" value="Probar" name="probar">
+                    <input type="button" value="Cerrar" name="cerrar">
+                </form>
+                
+            </section>
+
+
+
+
+            <section data-scroll-spy id="excercise-6">
+                <h3>Deteccion de dispositivos <br>(User agent)</h3>
+                <div id="user" class="device"></div>
+
+            </section>
+
+
+
+            <section data-scroll-spy id="excercise-7">
+                <h3>Deteccion de conexion</h3>
+            </section>
+
+
+
+            <section data-scroll-spy id="excercise-8">
+                <h3>Deteccion de la webcam</h3>
+                <video id="webcam"></video>
+            </section>
+
+
+
+            <section data-scroll-spy id="excercise-9">
+                <h3>Geolocalizacion</h3>
+                <div id="geolocation"></div>
+            </section>
+
+
+
+
+            <section data-scroll-spy id="excercise-10">
+                <h3>Filtros de busqueda</h3>
+                <input type="search" placeholder="Buscar..." class="card-filter">
+                <section class="cards">
+                    <figure class="card"><img src="perro.jpg" alt="perro" width="300px" height="200px">
+                        <figcaption>perro2</figcaption>
+                    </figure>
+                    <figure class="card"><img src="perro.jpg" alt="perro2" width="300px" height="200px">
+                        <figcaption>perro2</figcaption>
+                    </figure>
+                    <figure class="card"><img src="perro.jpg" alt="perro3" width="300px" height="200px">
+                        <figcaption>perro3</figcaption>
+                    </figure>
+                    <figure class="card"><img src="perro.jpg" alt="perro4" width="300px" height="200px">
+                        <figcaption>perro4</figcaption>
+                    </figure>
+                    <figure class="card"><img src="perro.jpg" alt="perro5" width="300px" height="200px">
+                        <figcaption>perro5</figcaption>
+                    </figure>
+            
+                </section>
+            </section>
+
+
+
+
+            <section data-scroll-spy id="excercise-11">
+                <h3>Sorteo Digital</h3>
+                <ul class="players">
+                    <li class="player">Javascript</li>
+                    <li class="player">PHP</li>
+                    <li class="player">JAVA</li>
+                    <li class="player">C</li>
+                    <li class="player">Python</li>
+                    <li class="player">Ruby</li>
+                    <li class="player">Go</li>
+                    <li class="player">Visual Basic</li>
+                    <li class="player">Rust</li>
+                    <li class="player">Perl</li>
+                </ul>
+
+                <button id="winner-btn">Obtener ganador!</button>
+            </section>
+
+
+
+            <section data-scroll-spy id="excercise-12">
+                <h3>Responsive Slider</h3>
+                <div class="slider">
+                    <div class="slider-slides">
+                        <div class="slider-slide active">
+                            <img src="perro.jpg" alt="perro">
+                        </div>
+
+                        <div class="slider-slide">
+                            <h4>Diapositiva 2</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum exercitationem ex rerum inventore expedita iusto, atque eius maiores repellendus quod labore voluptates odio minus, illo veritatis aspernatur aut quasi accusamus.</p>
+                        </div>
+                        <div class="slider-slide">
+                            <img src="perro.jpg" alt="perro2">
+                        </div>
+
+                        <div class="slider-slide">
+                            <h4>Diapositiva 4</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum exercitationem ex rerum inventore expedita iusto, atque eius maiores repellendus quod labore voluptates odio minus, illo veritatis aspernatur aut quasi accusamus.</p>
+                        </div>
+                    </div>
+                    <div class="slider-btns">
+                        <a class="prev" href="#">&laquo;</a>
+                        <a class="next" href="#">&raquo;</a>    
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section id="excercise-13">
+                <h3>Video inteligente</h3>
+                <video src="assets/video.mp4" muted controls loop data-smart-video></video>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <video src="assets/video.mp4" muted controls loop data-smart-video></video>
+            </section>
+
+
+
+            <section id="excercise-14">
+                <h3>Validacionde formularios</h3>
+
+                <form class="contact-form" action="https://formsubmit.co/j.d.rodriguez.1624@gmail.com" method="POST">
+                    <legend>Envianos tu formulario</legend>
+                    <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombre solo recibe letras y espacios en blanco" 
+                    pattern="[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]+$" required>
+                    <input type="email" name="email" placeholder="Escribe tu email"
+                    title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                    <input type="text" name="subject" placeholder="Asunto a tratar" title="El asunto es requerido" required >
+                    <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios"
+                    required data-pattern="^.{1,255}$" title="Tu comentario no debe exceder los 255 caracteres"></textarea>
+                    <input type="submit" value="Enviar">
+
+                    <div class="contact-form-loader none">
+                        <img src="assets/loader.svg" alt="Cargando">
+                    </div>
+
+                    <div class="contact-form-response none">
+                        <p>los datos han sido enviados</p>
+                    </div>
+                </form>
+            </section>
+
+
+
+            <section id="excercise-15">
+                <h3>Narrador de voz</h3>
+                <select id="speech-select">
+                    <option value="">---- Elige una voz ----</option>
+                </select>
+                <br><br>
+
+                <textarea id="speech-text" id="" cols="50" rows="5" placeholder="Ingresa aqui el texto que quieres que te lea"></textarea>
+                <br><br>
+
+                <button id="speech-btn" >Leer texto</button>
+                
+            </section>
+
+
+        </main>
+    
+
+    <script src="js/script.js" type="module"></script>
+</body>
+</html>
