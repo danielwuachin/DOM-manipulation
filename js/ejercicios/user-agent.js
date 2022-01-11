@@ -1,16 +1,6 @@
 const d = document,
-    n = navigator,
     ua = navigator.userAgent;
-/* 
-solo debes enviarle el id de donde quieres que se inserte el texto
 
-el user agent es del objeto padre navigator
-te devuleve un string con todos los datos de donde te estas conectando
-
-con expresiones regulares de ese string, puedes separar y adaptar tu aplicacion 
-tomando el cuenta desde que dispositivo te esta visitando un usuario
-
-*/
 export function userDeviceInfo(id) {
     const $id = d.getElementById(id),
         isMobile = {

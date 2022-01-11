@@ -1,0 +1,798 @@
+:root{
+    --font: sans-serif;
+    --font-size: 16px;
+    --yellow-color: #f7df1e;
+    --dark-color: #222;
+    --yellow-color-85: rgba(247,222,30, 0.85);
+    --dark-color-85: rgba(34, 34, 34, .85);
+    --container-width: 1200px;
+}
+
+
+
+
+/*-------------reset----------------*/
+html{
+    box-sizing: border-box;
+    font-family: var(--font);
+    /* se establece en 16´x para trabajar con rems */
+    font-size: var(--font-size);
+
+    /* para el scroll de los enlaces internos */
+    scroll-behavior: smooth;
+}
+
+
+/* [id]{
+    scroll-margin-top: 2rem;
+} */
+
+/* esto es para que el contenido generado dinamicamente se adate al tamaño del contenido de la etiqueta html creada anteriormente */
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+
+body{
+    margin: 0;
+
+    /* lo qeu sobre, no se vea */
+    overflow-x: hidden;
+}
+
+
+/* links con estilos reset */
+a{
+    transition: all 0.25s ease-out;
+}
+
+
+/* reseteamos los margenes de encabezados y su tamaño en rems */
+h1{
+    margin: 0;
+    font-size: 2rem;
+}
+h2{
+    margin: 0;
+    font-size: 1.5rem;
+}
+h3{
+    margin: 0;
+    font-size: 1.25rem;
+}
+h4{
+    margin: 0;
+    font-size: 1rem;
+}
+h5{
+    margin: 0;
+    font-size: .85rem;
+}
+h6{
+    margin: 0;
+    font-size: .7rem;
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+p{
+    line-height: 1.6;
+}
+b{
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+
+/* ------------styles de la pagina ---------------------------- */
+.header {
+    z-index: 997;
+    background-color: var(--yellow-color);
+    color: var(--dark-color);
+    padding: 1rem;
+    top: 0;
+    position: sticky;
+}
+
+.header h1{
+    text-align: center;
+}
+
+section{
+    padding: 2rem;
+    padding-top: 5rem;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width);
+    text-align: center;
+}
+
+section h3 {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------- ejercicio 1 == menu de hamburguesa ------------------------------ */
+
+/* boton de hamburguesa */
+.hamburguer{
+    position: fixed;
+    z-index: 999;
+    bottom: 1rem;
+    right: 1rem;
+
+
+    border: none;
+    padding: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 1.4rem;
+
+    cursor: pointer;
+    background-color: var(--yellow-color);
+    transition: all .5s;
+}
+
+.hamburguer:hover {
+    color: var(--yellow-color);
+    background-color: var(--dark-color);
+}
+
+.hamburguer-active{
+    transform: rotate(-90deg);
+    transition: all .5s;
+}
+
+
+
+
+/* menu */
+.panel{
+    overflow-y: auto;
+    /* no se usa 999 para que no sobreescriba el boton */
+    z-index: 998;
+    position: fixed;
+
+    /* asi obligamos a estirarse completo */
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    transition: transform .5s ease;
+    transform: translate(0, -180%);
+
+    background-color: var(--dark-color-85);
+}
+
+.panel-active {
+    transform: translate(0,0);
+}
+
+.menu{
+    /* que herede el tamaño del contenedor */
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.menu a{
+    /* que herede el tamaño del contenedor */
+    width: inherit;
+    padding: 1.2965rem;
+    font-size: 1.5rem;
+    width: 100%;
+    min-height: 20%;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    color: var(--yellow-color);
+    transition: all .3s;
+}
+
+.menu a:hover{
+    font-weight: bold;
+    color: var(--dark-color);
+    background-color: var(--yellow-color-85);
+}
+/* -----end hamburguer-------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------Hotkeys -------------------------------- */
+#stage{
+    background-color: var(--dark-color);
+    width: 100%;
+    height: 50vh;
+    border: 4px solid var(--yellow-color);
+    display: flex;
+}
+
+#ball {
+    margin: auto;
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+
+    background-color:var(--yellow-color-85);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------- boton para volver al inicio ---------------------------- */
+
+.up {
+    position: fixed;
+    z-index: 998;
+    bottom: 1rem;
+    right: 5.2rem;
+
+    border: none;
+    padding: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--dark-color);
+    background-color: var(--yellow-color);
+
+    cursor: pointer;
+    transform: translateY(0);
+    transition: all .5s; 
+    
+    display: flex;
+}
+
+.up:hover {
+    color: var(--yellow-color);
+    background-color: var(--dark-color);
+}
+
+.up *{
+    margin: auto;
+    font-size: 2rem;
+    padding-bottom: 0.2rem;
+}
+
+
+.hidden-btn{
+    /* es como display none pero permite animar */
+    visibility: none;
+    cursor:default;
+    transform: translateY(120px);
+    transition: all .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------ boton del tema claro u oscuro.------------------- */
+.theme {
+    position: fixed;
+    z-index: 998;
+    bottom: 1rem;
+    left: 1rem;
+
+    border: none;
+    padding: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--dark-color);
+    background-color: var(--yellow-color);
+
+    cursor: pointer;
+    transform: translateY(0);
+    transition: all .5s; 
+    
+    display: flex;
+}
+
+.theme:hover {
+    color: var(--yellow-color);
+    background-color: var(--dark-color);
+}
+
+.theme *{
+    margin: 8px auto;
+    font-size: 2rem;
+
+}
+
+
+/* tema a aplicar al cambiar de tema */
+.dark-body {
+    color: var(--yellow-color);
+    background-color: var(--dark-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------formulario -------------------------------------- */
+.formweb {
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------ detecion de la conexion-------- */
+
+.online,
+.offline {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #1b5e20;
+    color: #fff;
+}
+
+.offline {
+    background-color: #b71c1c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------- search filters --------------------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+    transition: all .3s ease-out;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card figcaption{
+    padding: 1rem;
+}
+
+.filter {
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------slider carrusel ------------------------ */
+
+.slider {
+    position: relative;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+    border: thin solid black;
+}
+
+.slider-slides {
+    position: relative;
+    height: 400px;
+}
+
+.slider-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+}
+
+.slider-slide img {
+    height: inherit;
+    width: inherit;
+
+    /* para adaptar la imagen correctamente */
+    object-fit: cover;
+    /* para centrar que se vera en la imagen en x y Y dentro dle contenedor */
+    object-position: 50% 0%;
+}
+
+
+
+.slider-btns {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;    
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.slider a {
+    display: block;
+    width: 4rem;
+    height:4rem;
+    border-radius: 50%;
+    border: thin solid #000;
+    text-decoration: none;
+    bacKground-color: #fff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.slider a:hover{
+    color: #444444;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------- formularios -----------------*/
+
+.contact-form {
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44836;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.contact-form > * {
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea{
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.contact-form input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form *::placeholder{
+    color: #000;
+}
+
+.contact-form [required]:valid {
+    border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid {
+    border: thin solid var(--form-error-color);
+}
+
+.contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+    display: none;
+}
+
+
+@keyframes show-message {
+    0% {
+        visibility:hidden;
+        opacity: 1;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+/* ------------------------------va de ultimo ------------- */
+
+.hidden{
+    display: none;
+    transition: all .5s;
+}
+
+
+
+
+#smart-video > video{
+    max-width: 75%;
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------MEDIA QUERIES ------------------------------------------- */
+
+@media screen and (min-width: 1024px){
+    body {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: 
+        "header header"
+        "main panel";
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    .panel {
+        grid-area: panel;
+        position: sticky;
+        top: 4rem;
+        transform: translate(0,0);
+
+        align-self: start;
+        justify-content: flex-start;
+        background-color: var(--dark-color);
+    }
+
+    .hamburguer {
+        display: none;
+    }
+
+    .menu {
+        justify-content: start;
+    }
+
+    .menu a {
+        font-size: 1rem;
+        text-align: right;
+        padding: .75rem;
+    }
+
+    .menu a:hover,
+    .menu a.active{
+        color: var(--dark-color);
+        background-color: var(--yellow-color);
+    }
+
+    .up {
+    
+        right: calc(20% + 1vw);
+    }
+
+    
+}

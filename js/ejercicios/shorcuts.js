@@ -4,8 +4,6 @@ let x = 0,
 
 
 export function shorcuts (e) {
-    
-
     if (e.key === 'ArrowUp'){
         alert('lanzaste una alerta con el teclado');
     }
@@ -18,21 +16,16 @@ export function shorcuts (e) {
 }
 
 
-
-
-/* necesitas el evento keydown, selector de la bola y del stage */
 export function moveBall(e, ball, stage) {
     const $ball = d.querySelector(ball),
         $stage = d.querySelector(stage),
-        /* usamos este metodo para comparar que la bola no salga del stage
-        tomando en cuenta las coordenadas */
+
         limitbBall = $ball.getBoundingClientRect(),
         limitStage = $stage.getBoundingClientRect();
 
     switch (e.keyCode){
         case 37:
             if(limitbBall.left > (limitStage.left + 2)) {
-                //asi prevenimos el default de esta flecha
                 e.preventDefault()
                 x--
             }

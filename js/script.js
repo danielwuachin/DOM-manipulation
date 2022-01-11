@@ -18,13 +18,12 @@ import { smartVideo } from './ejercicios/video-inteligente.js';
 import { contactFormValidations } from './ejercicios/form-validation.js';
 import { speechReader } from './ejercicios/narrador.js';
 
-//para importar sonidos, mandas la ubicacion
-//para los target.matches() es necesario enviar el # o el .
 
 
 const d = document;
+
+
 /* menu de hamburguesa */
-//asignamos el evento al dom despues de cargarse completo
 d.addEventListener("DOMContentLoaded", e=> {
     hamburguer('panel', 'hamburguer')
 })
@@ -33,54 +32,25 @@ d.addEventListener("DOMContentLoaded", e=> {
 
 
 /* reloj y alarma digital */
-//asignamos el evento al dom despues de cargarse completo
 d.addEventListener("DOMContentLoaded", e=> {
     timeStart('time', '.timeStart','.timeStop');
-
-    //para importar sonidos, mandas la ubicacion
     alarm('MrBlueSky.m4a', '#alarmStart','#alarmtStop');
 })
 
 
 
-/* shorcuts */
-
-/* existen tres eventos: 
-keydown: cuando presionamos
-keyup: cuando soltamos
-keypress: mientras mantenemos presionado 
-
-los objetos del teclado tienen datos importantes para usar en eventos*/
-
-/* hacer que detexte las teclas tocadas */
-
-/* d.addEventListener("keydown", e=>{
-    shorcuts(e)
-}) */
-
-
-/* mover la bola */
+/* shorcuts 
+ mover la bola */
 d.addEventListener("keydown", (e) => {
     moveBall(e, '#ball','#stage');
 })
 
 
 
-
-
-
-
-
-
-
 /*  cuenta regresiva */
 d.addEventListener("DOMContentLoaded", e=> {
-    countdown('#countdown', "2022-10-06", "feliz añooo ")
+    countdown('#countdown', "2022-10-06", "Ha")
 })
-
-
-
-
 
 
 
@@ -89,34 +59,24 @@ foward('.up')
 
 
 
-
-
-
-
 /* boton de tema dark/light */
 theme('.theme', 'dark-body')
 
 
-
-
-
 /* responsible responsive design tip */
-/* d.addEventListener("DOMContentLoaded", e=> {
+d.addEventListener("DOMContentLoaded", e=> {
     responsiveMedia('youtube',
     "(min-width: 720px)",
     `<a href="https://www.youtube.com/watch?v=Xd9eB--HVKg&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">ver video</a>
     `, 
     `<iframe width="560" height="315" src="https://www.youtube.com/embed/Xd9eB--HVKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
-}) */
-
+})
 
 
 
 d.addEventListener('DOMContentLoaded', e => {
     responsiveTester("responsive-tester")
 })
-
-
 
 
 
@@ -127,28 +87,19 @@ d.addEventListener('DOMContentLoaded', e => {
 
 
 
-/* network status 
-se deja fuera porque solo se ejecuta cuando no haya conexion*/
+/* network status - only appears when have no connection to internet*/
 networkStatus();
 
 
 
-
 /* detectar webcam */
-
 webcam('webcam')
-
-
-
-
 
 
 /* geolocation */
 d.addEventListener('DOMContentLoaded', e => {
     getGeolocation('geolocation')
 })
-
-
 
 
 
@@ -159,14 +110,10 @@ d.addEventListener('DOMContentLoaded', e => {
 
 
 
-
-
 /* sorteo */
 d.addEventListener('DOMContentLoaded', e => {
     draw("#winner-btn", '.player');
 })
-
-
 
 
 
@@ -177,10 +124,6 @@ d.addEventListener('DOMContentLoaded', e => {
 
 
 
-
-
-
-
 /* scrollSpy */
 d.addEventListener('DOMContentLoaded', e => {
     scrollSpy();
@@ -188,15 +131,10 @@ d.addEventListener('DOMContentLoaded', e => {
 
 
 
-
-
 /* smart video */
 d.addEventListener('DOMContentLoaded', e => {
     smartVideo()
 })
-
-
-
 
 
 

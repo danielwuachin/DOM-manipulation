@@ -1,15 +1,7 @@
 const d = document,
     w = window;
 
-/*
-al igual que el scrollspy, solo creas tu objeto IntersectionObserver
-de callback le pasas lo que quieres que se ejecute al mostrarse X cosa
-le pasas las opciones de vision que quieras
 
-luego, usando data-attributes en lo que quieres modificar, lo guardas en variable
-y a eso, le haces forEach y ejectuas tu objeto IO con el metodo observe()
-y de parametro le pasas el elemento sacado del foreach
- */
 export function smartVideo() {
     const $videos = d.querySelectorAll("video[data-smart-video]");
 
@@ -31,6 +23,6 @@ export function smartVideo() {
     }
     const observer = new IntersectionObserver(cb, {threshold:0.5});
 
-    //el observe() es para que funcione le observador
+    //el observe() es para que funcione el observador
     $videos.forEach(el => observer.observe(el))
 }

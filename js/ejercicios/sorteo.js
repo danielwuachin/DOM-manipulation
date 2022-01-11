@@ -1,10 +1,5 @@
 const d = document;
 
-/* 
-para que funcione, pasas el selector del boton y el selector donde estan
-los nombres de personas del sorteo
-*/
-
 export function draw(btn, selector) {
     const getWinner = (selector) => {
         const $players = d.querySelectorAll(selector),

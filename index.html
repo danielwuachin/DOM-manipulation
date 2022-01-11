@@ -5,11 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/style.css">
-        <title>Ejercicios del DOM</title>
+        <title>Manipulando el DOM</title>
     </head>
     <body>
         <header class="header">
-            <h1>Ejercicios del DOM</h1> 
+            <h1>Manipulando el DOM</h1> 
         </header>
 
     
@@ -25,7 +25,7 @@
                 <a href="#excercise-2" data-scroll-spy>Atajos del teclado</a>
                 <a href="#excercise-3" data-scroll-spy>Cuenta regresiva</a>
                 <a href="#excercise-4" data-scroll-spy>Responsible</a>
-                <a href="#excercise-5" data-scroll-spy>formularios</a>
+                <a href="#excercise-5" data-scroll-spy>Responsive tester</a>
                 <a href="#excercise-6" data-scroll-spy>User agent</a>
                 <a href="#excercise-7" data-scroll-spy>Deteccion de conexion</a>
                 <a href="#excercise-8" data-scroll-spy>Deteccion de la webcam</a>
@@ -34,8 +34,8 @@
                 <a href="#excercise-11" data-scroll-spy>Sorteo digital</a>
                 <a href="#excercise-12" data-scroll-spy>Responsive slider</a>
                 <a href="#excercise-13" data-scroll-spy>Video inteligente</a>
-                <a href="#excercise-14" data-scroll-spy>Validacion de formularios</a>
-                <a href="#excercise-15" data-scroll-spy>Narrador de voz</a>
+                <a href="#excercise-14" data-scroll-spy>Narrador de voz</a>
+                <a href="#excercise-15" data-scroll-spy>Validacion de formularios</a>
             </nav>
         </aside>
 
@@ -48,7 +48,7 @@
         
         
         <!-- boton tema claro-oscuro -->
-        <a class="theme"  ><span class="theme-span">D</span></a>
+        <a class="theme"><span class="theme-span">☀️</span></a>
 
         <main>
 
@@ -78,6 +78,7 @@
                 <br>
 
                 <h4>Atajos de teclado</h4>
+                <p>Usa &larr;, &uarr;, &rarr; o &darr; para mover la bola</p>
                 <br>
 
                 <article id="stage">
@@ -89,8 +90,8 @@
 
 
             <section data-scroll-spy id="excercise-3">
-                <h3>Cuenta regresiva</h3>
-
+                <h3>Cuenta regresiva para año nuevo</h3>
+                <br>
                 <h3 id="countdown"></h3>
             </section>
 
@@ -99,7 +100,7 @@
 
             <section data-scroll-spy id="excercise-4">
                 <h3>Responsible</h3>
-
+                <p>Un ejemplo de Responsible responsive web design. <br>Mirame en tamaño de movil para que veas la diferencia</p>
                 <div id="youtube">
 
                 </div>
@@ -114,7 +115,8 @@
 
 
             <section data-scroll-spy id="excercise-5">
-                <h3>formulario</h3>
+                <h3>Responsive tester</h3>
+                <p>Prueba cualquier URL al alto y ancho que desees</p>
 
                 
                 <form action="" id="responsive-tester">
@@ -143,6 +145,7 @@
 
             <section data-scroll-spy id="excercise-7">
                 <h3>Deteccion de conexion</h3>
+                <p>Se mostrara automaticamente una alerta cuando tengas/no tengas conexion a internet</p>
             </section>
 
 
@@ -166,20 +169,23 @@
                 <h3>Filtros de busqueda</h3>
                 <input type="search" placeholder="Buscar..." class="card-filter">
                 <section class="cards">
-                    <figure class="card"><img src="perro.jpg" alt="perro" width="300px" height="200px">
+                    <figure class="card"><img src="assets/perro.jpg" alt="perro" width="300px" height="200px">
+                        <figcaption>perro1</figcaption>
+                    </figure>
+                    <figure class="card"><img src="assets/perro.jpg" alt="perro2" width="300px" height="200px">
                         <figcaption>perro2</figcaption>
                     </figure>
-                    <figure class="card"><img src="perro.jpg" alt="perro2" width="300px" height="200px">
-                        <figcaption>perro2</figcaption>
-                    </figure>
-                    <figure class="card"><img src="perro.jpg" alt="perro3" width="300px" height="200px">
+                    <figure class="card"><img src="assets/perro.jpg" alt="perro3" width="300px" height="200px">
                         <figcaption>perro3</figcaption>
                     </figure>
-                    <figure class="card"><img src="perro.jpg" alt="perro4" width="300px" height="200px">
-                        <figcaption>perro4</figcaption>
+                    <figure class="card"><img src="assets/ave.jpg" alt="ave4" width="300px" height="200px">
+                        <figcaption>ave4</figcaption>
                     </figure>
-                    <figure class="card"><img src="perro.jpg" alt="perro5" width="300px" height="200px">
-                        <figcaption>perro5</figcaption>
+                    <figure class="card"><img src="assets/ave.jpg" alt="ave5" width="300px" height="200px">
+                        <figcaption>ave5</figcaption>
+                    </figure>
+                    <figure class="card"><img src="assets/ave.jpg" alt="ave5" width="300px" height="200px">
+                        <figcaption>ave5</figcaption>
                     </figure>
             
                 </section>
@@ -213,7 +219,7 @@
                 <div class="slider">
                     <div class="slider-slides">
                         <div class="slider-slide active">
-                            <img src="perro.jpg" alt="perro">
+                            <img src="assets/ave.jpg" alt="ave">
                         </div>
 
                         <div class="slider-slide">
@@ -221,7 +227,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum exercitationem ex rerum inventore expedita iusto, atque eius maiores repellendus quod labore voluptates odio minus, illo veritatis aspernatur aut quasi accusamus.</p>
                         </div>
                         <div class="slider-slide">
-                            <img src="perro.jpg" alt="perro2">
+                            <img src="assets/perro.jpg" alt="perro">
                         </div>
 
                         <div class="slider-slide">
@@ -241,15 +247,36 @@
 
             <section id="excercise-13">
                 <h3>Video inteligente</h3>
-                <video src="assets/video.mp4" muted controls loop data-smart-video></video>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                <video src="assets/video.mp4" muted controls loop data-smart-video></video>
+                <p>Me pausare automaticamente cuando no me estes viendo</p>
+                <div id="smart-video">
+                    <video src="assets/video.mp4" muted controls loop data-smart-video></video>
+                    
+                    <video src="assets/video.mp4" muted controls loop data-smart-video></video>
+                </div>
+                
             </section>
 
 
 
+
             <section id="excercise-14">
-                <h3>Validacionde formularios</h3>
+                <h3>Narrador de voz</h3>
+                <select id="speech-select">
+                    <option value="">---- Elige una voz ----</option>
+                </select>
+                <br><br>
+
+                <textarea id="speech-text" id="" cols="50" rows="5" placeholder="Ingresa aqui el texto que quieres que te lea"></textarea>
+                <br><br>
+
+                <button id="speech-btn" >Leer texto</button>
+                
+            </section>
+
+
+
+            <section id="excercise-15">
+                <h3>Contactame! (Y Validacion de formularios)</h3>
 
                 <form class="contact-form" action="https://formsubmit.co/j.d.rodriguez.1624@gmail.com" method="POST">
                     <legend>Envianos tu formulario</legend>
@@ -274,19 +301,7 @@
 
 
 
-            <section id="excercise-15">
-                <h3>Narrador de voz</h3>
-                <select id="speech-select">
-                    <option value="">---- Elige una voz ----</option>
-                </select>
-                <br><br>
-
-                <textarea id="speech-text" id="" cols="50" rows="5" placeholder="Ingresa aqui el texto que quieres que te lea"></textarea>
-                <br><br>
-
-                <button id="speech-btn" >Leer texto</button>
-                
-            </section>
+            
 
 
         </main>

@@ -1,9 +1,3 @@
-
-
-/* debes enviar el id del div vacio para la hora
-el id o class del boton iniciar
-el id o class del boton para quitar */
-/* RELOJ */
 export const timeStart = (time, start, stop) => {
     const d = document,
         $start = d.getElementById(time);
@@ -14,12 +8,10 @@ export const timeStart = (time, start, stop) => {
             clock = setInterval(() => {
                 let   hora = new Date().toLocaleTimeString();
 
-                //en vez de insertText(), se usa este y se borra antes de la hora nueva
                 $start.textContent = '';
                 $start.textContent = hora;
             }, 1000);
 
-            //asi se agrega el disabled a botones
             e.target.disabled = true
         }
         
@@ -34,7 +26,6 @@ export const timeStart = (time, start, stop) => {
 
 
 /* ALARMA */
-/* debes enviar la ubicacion del sonido, el tag del boton play y el de stop */
 
 export function alarm(sound, play, stop){
     let alarmTempo;

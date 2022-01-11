@@ -1,15 +1,8 @@
 const d = document,
     n = navigator;
-/* 
-te conectas a traves de internet o del gps
-solo le padas el id de donde quieres anexar la ubicadcion
 
-tambien hay un metodo que creo que se llama watchPosition el cual
-es para compartir la ubicacion en tiempo real mientras te mueves
-*/
 export function getGeolocation(id) {
     const $id = d.getElementById(id),
-    //parametros para la geolocalizacion
         options = {
             enableHighAccuracy:true,
             timeout: 50000,
@@ -33,7 +26,6 @@ export function getGeolocation(id) {
     }
 
     const error = err => {
-        //esto devuelve un objeto, aqui especificamos el error
         $id.innerHTML = `<p><mark>Error ${err.code}: ${err.message}</mark></p>`
         console.log(`<p><mark>Error ${err.code}: ${err.message}</mark></p>`);
     };

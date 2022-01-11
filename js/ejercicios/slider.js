@@ -1,13 +1,5 @@
 const d = document;
 
-/* 
-se debe respeta<r el marcado HTMNL para que funcione el carrusel
-
-para automatizarlo, se debe usar un set interval y listo
-
-simplemente es agregar o quitar una clase
-*/
-
 export function slider() {
     const $nextBtn = d.querySelector('.slider-btns .next'),
         $prevBtn = d.querySelector(".slider-btns .prev"),

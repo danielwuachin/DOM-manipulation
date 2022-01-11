@@ -9,13 +9,10 @@ export function speechReader() {
 
     let voices = [];
 
-    /* para obtener las voces, debes ejecutar un evento llamado voieschanged
-    y dentro de el, ejecutar el getVoices() para obtener las voces */
     d.addEventListener('DOMContentLoaded', e => {
         w.speechSynthesis.addEventListener('voiceschanged', (e) =>{
             voices = w.speechSynthesis.getVoices();
 
-            /* agregamos un option por cada voz encontrada */
             voices.forEach((voice) => {
                 const $option = d.createElement('option');
                 $option.value = voice.name;
@@ -40,5 +37,4 @@ export function speechReader() {
             w.speechSynthesis.speak(speechMessage);
         }
     });
-    
 }
