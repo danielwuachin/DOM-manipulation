@@ -34,7 +34,7 @@ d.addEventListener("DOMContentLoaded", e=> {
 /* reloj y alarma digital */
 d.addEventListener("DOMContentLoaded", e=> {
     timeStart('time', '.timeStart','.timeStop');
-    alarm('./assets/beep.wav', '#alarmStart','#alarmtStop');
+    alarm('./assets/alarma.mp3', '#alarmStart','#alarmtStop');
 })
 
 
