@@ -34,7 +34,7 @@ d.addEventListener("DOMContentLoaded", e=> {
 /* reloj y alarma digital */
 d.addEventListener("DOMContentLoaded", e=> {
     timeStart('time', '.timeStart','.timeStop');
-    alarm('MrBlueSky.m4a', '#alarmStart','#alarmtStop');
+    alarm('./assets/beep.wav', '#alarmStart','#alarmtStop');
 })
 
 
