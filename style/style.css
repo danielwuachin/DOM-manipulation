@@ -724,7 +724,14 @@ section h3 {
 
 
 
+/*------------------------- narrador de voz -------------------------*/
+#speech-select{
+    width: 60%;
+}
 
+#speech-text{
+    width: 74%;
+}
 
 
 
@@ -795,4 +802,9 @@ section h3 {
     }
 
     
+}
+
+
+@media screen and (max-width: 412px){
+
 }
