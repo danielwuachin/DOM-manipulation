@@ -67,9 +67,5 @@ export function userDeviceInfo(id) {
     }
 
 
-    /* hacer redirecciones dependiendo de X factor */
-    if(isMobile.android()){
-        window.location.href = 'http://127.0.0.1:5500/introduccion.html'
-    }
 
 }
