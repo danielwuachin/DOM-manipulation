@@ -1,4 +1,4 @@
-# Playing with the DOM API
+# Playing with the DOM API💻
 
 ### Some practical uses of the DOM API, for example:
 
@@ -36,8 +36,8 @@
 
 ## Link to te page
 
-- [DOM manipulation][1]
+- <a href="https://danielwuachin.github.io/DOM-manipulation" target="_blank" rel="noopened"> Click me!🌎</a>
 
+<br>
 
-
-[1]: <https://danielwuachin.github.io/DOM-manipulation>
+Thanks for your visit 💙

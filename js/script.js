@@ -69,7 +69,7 @@ d.addEventListener("DOMContentLoaded", e=> {
     "(min-width: 720px)",
     `<a href="https://www.youtube.com/watch?v=Xd9eB--HVKg&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">ver video</a>
     `, 
-    `<iframe width="853" height="480" src="https://www.youtube.com/embed/ttLxwYM4QBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+    `<iframe width="853" height="480" src="https://www.youtube.com/embed/SZ09h4hJA3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
 })
 
 
